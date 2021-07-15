@@ -33,7 +33,14 @@ n_print = int(input("How many most common words to print: "))
 print("\n The {} most common words are as follows: \n".format(n_print))
 
 word_counter = collections.Counter(wordcount)
-for word, count in word_counter.most_common(n_print):
-    print(word, ': ', count)
+
+with open('wordlist.txt', mode='w') as text:
+    text.write("Most common words: ")
+    text.write("\n")
+    for word, count in word_counter.most_common(n_print):
+        print(word, ': ', count)
+        text.write(word + " : " + str(count))
+        text.write("\n")
+    text.close()
 
 file.close()
