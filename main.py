@@ -43,4 +43,5 @@ with open('wordlist.txt', mode='w') as text:
         text.write("\n")
     text.close()
 
+print('Finished! The Wrod List is ready!')
 file.close()
