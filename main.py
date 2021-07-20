@@ -1,5 +1,4 @@
 import collections
-import pandas as pd
 
 # Read input file
 file = open('sample.txt', encoding="utf8")
